@@ -1,18 +1,18 @@
-jenkinsdata:
+data:
   build: jenkins-data
 
-jenkinsmaster:
+master:
   build: jenkins-master
   volumes_from:
-    - jenkinsdata
+    - data
   ports:
     - "50000:50000"
 
-jenkinsnginx:
+nginx:
   build: jenkins-nginx
   ports:
     - "80:80"
   links:
     # jenkinsmaster is defined above
     # jenkins-master is the named link, the same as in jenkins.conf
-    - jenkinsmaster:jenkins-master
+    - master:jenkins-master
