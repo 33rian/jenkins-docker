@@ -62,3 +62,4 @@ workflow-step-api 2.3
 workflow-support 2.4
 ws-cleanup 0.30
 yet-another-docker-plugin 0.1.0-rc24
+locale
