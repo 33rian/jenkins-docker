@@ -11,6 +11,8 @@ master:
 nginx:
   build: jenkins-nginx
   ports:
+    # If using other port, let call PORT, you need to change jenkins.conf a little, as
+    # proxy_redirect http://example.com/ http://example.com:PORT/;
     - "80:80"
   links:
     # jenkinsmaster is defined above
